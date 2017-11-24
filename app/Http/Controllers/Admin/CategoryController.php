@@ -63,7 +63,11 @@ public function store(Request $request)
      */
     public function edit(Category $category)
     {
-        //
+      return view('admin.categories.edit', [
+         'category'   => $category,
+         'categories' => Category::with('children')->where('parent_id', '0')->get(),
+         'delimiter'  => ''
+      ]);
     }
 
     /**
@@ -76,6 +80,9 @@ public function store(Request $request)
     public function update(Request $request, Category $category)
     {
         //
+        $category->update($request->except('slug'));
+        return redirect()->route('admin.category.index');
+
     }
 
     /**
@@ -87,5 +94,7 @@ public function store(Request $request)
     public function destroy(Category $category)
     {
         //
+        $category->delete();
+        return redirect()->route('admin.category.index');
     }
 }

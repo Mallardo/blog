@@ -5,9 +5,9 @@
 <div class="container">
 
   @component('admin.components.breadcrumb')
-    @slot('title') Создание категории @endslot
-    @slot('parent') Главная @endslot
-    @slot('active') Категории @endslot
+    @slot('title') Створення категорій @endslot
+    @slot('parent') Головна @endslot
+    @slot('active') Категорія @endslot
   @endcomponent
 
   <hr />

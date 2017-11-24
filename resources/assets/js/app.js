@@ -5,7 +5,14 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
 require('./bootstrap');
+
+//CREDITOR
+$( document ).ready(function() {
+  CREDITOR.replace('description_short');
+  CREDITOR.replace('description');
+});
 
 window.Vue = require('vue');
 
