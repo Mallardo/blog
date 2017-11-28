@@ -26,7 +26,7 @@ class CreateArticlesTable extends Migration
             $table->string('meta_keyword')->nullable();
             $table->boolean('published');
             $table->integer('viewed')->nullable();
-            $table->integer('crated_by')->nullable();
+            $table->integer('created_by')->nullable();
             $table->integer('modified_by')->nullable();
             $table->timestamps();
         });
