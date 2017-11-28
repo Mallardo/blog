@@ -12,10 +12,10 @@
 <label for="">Заголовок</label>
 <input type="text" class="form-control" name="title" placeholder="Заголовок новости" value="{{$article->title or ""}}" required>
 
-<label for="">Slug (Уникальное значение)</label>
+<label for="">Slug (Унікальне значення)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$article->slug or ""}}" readonly="">
 
-<label for="">Родительская категория</label>
+<label for="">Батьківська категория</label>
 <select class="form-control" name="categories[]" multiple="">
   @include('admin.articles.partials.categories', ['categories' => $categories])
 </select>
@@ -34,9 +34,9 @@
 <label for="">Мета описание</label>
 <input type="text" class="form-control" name="meta_description" placeholder="Мета описание" value="{{$article->meta_description or ""}}">
 
-<label for="">Ключевые слова</label>
+<label for="">Ключові слова</label>
 <input type="text" class="form-control" name="meta_keyword" placeholder="Ключевые слова, через запятую" value="{{$article->meta_keyword or ""}}">
 
 <hr />
 
-<input class="btn btn-primary" type="submit" value="Сохранить"> 
+<input class="btn btn-primary" type="submit" value="Зберегти">
