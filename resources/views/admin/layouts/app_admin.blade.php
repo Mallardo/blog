@@ -39,16 +39,19 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      <li>
+                        <a href="{{ route('admin.index') }}">Панель стану</a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             Блог
-                          </a>
+                        </a>
 
                           <ul class="dropdown-menu" role="menu">
                             <li><a href="{{route('admin.category.index')}}">Категорії</a></li>
                             <li><a href="{{route('admin.article.index')}}">Матеріали</a></li>
                           </ul>
-                        <li>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
